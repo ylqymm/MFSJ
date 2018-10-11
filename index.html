@@ -202,16 +202,24 @@
 						</div>
 					</div>
 					<div class="nav_box_right">
-						<ul>
-							<li><a href="#">首页</a></li>
-							<li><a href="#">膜法故事</a></li>
-							<li><a href="#">膜法护肤之旅</a></li>
-							<li><a href="#">关于我们</a></li>
-							<li><a href="#">膜法经销</a></li>
-							<li><a href="#">百科词条名</a></li>
-							<li><a href="#">联系我们</a></li>
+						<ul id="nav">
+							<li>
+								<a href="#">首页</a>
+								<div class="line"></div>
+							</li>
+							<li><a href="#">膜法故事</a>
+						<div class="line"></div></li>
+							<li><a href="#">膜法护肤之旅</a>
+						<div class="line"></div></li>
+							<li><a href="#">关于我们</a>
+						<div class="line"></div></li>
+							<li><a href="#">膜法经销</a>
+						<div class="line"></div></li>
+							<li><a href="#">百科词条名</a>
+						<div class="line"></div></li>
+							<li><a href="#">联系我们</a>
+						<div class="line"></div></li>
 						</ul>
-						<div class="line"></div>
 					</div>
 				</div>
 			</div>
@@ -1009,9 +1017,9 @@
 		</div>
 	</body>
 </html>
+<script src="js/search.js"></script>
 <script src="js/tab.js"></script>
 <script src="js/function.js"></script>
-<!-- <script src="js/search.js"></script> -->
 <script src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/slider.js" ></script>
 
@@ -1020,5 +1028,17 @@
 		let s1 = new Slider($("#sliderBox"),270,475,["img/banner1.png","img/banner2.png"],
 				70,10,"#ccc","#6f6c6c",
 				true,-1,1500);
-	}
+
+
+$(function(){
+	$(".nav_box_right li").hover(
+			function(){
+				$(this).find(".line").show();
+			},
+			function(){
+				$(this).find(".line").hide();
+			},
+		)
+	});
+}
 </script>
