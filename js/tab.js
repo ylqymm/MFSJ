@@ -25,3 +25,5 @@
 		this.className='fix';
 		productClass_footer_box[this.index].style.display='block';
 	}
+
+

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAI;EACH,KAAK,EAAC,KAAK;EACX,MAAM,EAAC,IAAI;EACX,OAAO,EAAC,CAAC",
+"sources": ["../workSass/shopping.scss"],
+"names": [],
+"file": "shopping.css"
+}

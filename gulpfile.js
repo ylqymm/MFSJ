@@ -6,7 +6,7 @@ var sass=require("gulp-sass");
 //task函数的第一个参数function是任务copyHtml对应的功能
 gulp.task("copy-html",function(){
 	//gulp.src("index.html").pipe(gulp.dest("dist"));
-	gulp.src("**/*").pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam"));
+	gulp.src("*.html").pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam"));
 });
 gulp.task("copy-img",function(){
 	gulp.src("img/**/*").pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam/img"));
@@ -22,9 +22,9 @@ gulp.task("copy-js",function(){
 
 //sass的编译
 gulp.task("sass",function(){
-	gulp.src("sass/**/*.scss")
+	gulp.src("workSass/**/*.scss")
 	.pipe(sass())
-	.pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam//css"));
+	.pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam\\css"));
 });
 
 
@@ -35,6 +35,6 @@ gulp.task("watchall",function(){
 	gulp.watch("img/**/*.{jpg,png,gif}",["copy-img"]);  //注意：图片格式用大括号括起来，中间用逗号隔开，不能有空格
 	gulp.watch("css/**/*.css",["copy-css"]);
 	gulp.watch("js/**/*.js",["copy-js"]);
-	gulp.watch("sass/**/*.scss",["sass"]);
+	gulp.watch("workSass/**/*.scss",["sass"]);
 });
 
