@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>list</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="css/list.css"/>
+</head>
+<body>
+	<!-- 公共部分 -->
+	<div id="box"></div>
+	<!-- acticle部分 -->
+	<div class="acticle">
+		<div class="headerTopCenter">
+			<div class="acticle_top">
+				<ul>
+					<li><a href="#">首页</a><span></span></li>
+					<li><a href="#">IP定制系列<span></span></a><span></span>
+						<div class="IP">
+							<a href="#">绿豆清肌系列</a>
+							<a href="#">睡莲水光系列</a>
+							<a href="#">樱桃补水系列</a>
+							<a href="#">新概念系列</a>
+							<a href="#">黑面膜系列</a>
+							<a href="#">IP定制系列</a>
+							<a href="#">樱桃补水系列</a>
+							<a href="#">睡莲水光系列</a>
+							<a href="#">新概念系列</a>
+							<a href="#">绿豆清肌系列</a>
+						</div>
+					</li>
+					<li><a href="#">贴式面膜</a><span></span></li>
+					<li><a href="#">黑面膜</a><span></span></li>
+					<li><a href="#">膜法世家吴磊定制版鸡蛋面膜20片</a></li>
+				</ul>
+			</div>
+			<!-- 价格 -->
+			<div class="price">
+				<div class="price_cen">
+					 <p>价格：</p>
+					 <ul>
+					 	<li><a href="#">69-75</a></li>
+					 	<li><a href="#">75-81</a></li>
+					 	<li><a href="#">87-93</a></li>
+					 	<li><a href="#">99-105</a></li>
+					 	<li>
+					 		<input type="text"> -
+					 		<input type="text">
+					 		<a href="#">确定</a>
+					 	</li>
+					 </ul>
+				</div>
+			</div>
+			<!-- list部分 -->
+			<div class="list">
+				<div class="list_cen">
+					<div class="list_cen_left">
+						<div class="list_left_top">
+							<h3>销量排行榜</h3>
+							<span><i></i></span>
+						</div>
+						<div class="list_left_cen">
+							<img src="img/list1.jpg" alt="" width="210px">
+							<div class="list_left_d">
+								<span>￥99.90</span>
+								<span>销量:4</span>
+							</div>
+						</div>
+					</div>
+					<div class="list_cen_right"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		$("#box").load("public.html");
+	});
+</script>

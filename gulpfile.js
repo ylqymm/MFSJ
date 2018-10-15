@@ -28,6 +28,9 @@ gulp.task("sass",function(){
 });
 
 
+gulp.task("build",["copy-html","copy-css","copy-img","copy-js","sass"],function(){
+	gulp.src("js/**/*").pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam/js"));
+});
 //监听
 gulp.task("watchall",function(){
 	//一旦index.html的内容发生改变，那么就立即执行任务copyHtml;

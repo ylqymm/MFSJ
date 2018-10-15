@@ -1,0 +1,196 @@
+@charset "utf-8";
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,input,select,option,textarea{
+    margin:0;
+    padding:0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.register{
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.register img{
+    float: left;
+}
+.register h3{
+    display: inline-block;
+    font-size: 26px;
+    float: left;
+    margin-left: 10px;
+    border-left: 1px solid #f8f8f8;
+    padding-left:10px;
+    height: 57px;
+    line-height: 57px;
+    font-weight: 100;
+}
+.logo{
+    margin-top: 20px;
+}
+.content{
+    height: 500px;
+    background: url(../img/login.png) no-repeat center; 
+}
+.w990{
+    width: 990px;
+    margin: 0 auto;
+     /*overflow: hidden;*/
+    position: relative;
+}
+.login{
+    width: 345px;
+    position: absolute;
+    top:30px;
+    right: 0;
+    background:#fff;
+}
+.login_con{
+    padding: 15px 30px;
+}
+.login_erweima{
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    right: 10px;
+    top:10px;
+     background:url(../img/picture.png) no-repeat -309px 0px;
+}
+.login_top{
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    margin-bottom: 25px;
+    span{
+        color: #999;
+    }
+    a{
+        color: #e31939;
+    }
+}
+.login_down{
+    ul{
+       height: 35px;
+       line-height: 35px; 
+       margin-bottom: 25px;
+    }
+    li{
+       text-align: center;
+        display: inline-block;
+        font-size: 12px;
+        padding: 0 16px;
+        a{
+            color: #666;
+        }
+    }
+}
+.login_down ul li:nth-of-type(1){
+    border: 1px solid #e31939;
+    border-bottom: none;
+}
+.login_down ul li:nth-of-type(2){
+    border-bottom: 1px solid #e31939;
+    margin-left: -5px;
+}
+.all{
+    margin-bottom: 25px;
+}
+form input{
+    width: 243px;
+    height: 40px;
+    font-size: 12px;
+    color: #999; 
+    padding-left:42px;
+    border:1px solid #999;
+    outline: none;
+}
+form input:nth-of-type(1){
+    background:url(../img/user.jpg) no-repeat 12px center;
+}
+form input:nth-of-type(2){
+    background:url(../img/pass.jpg) no-repeat 12px center;
+}
+.submit{
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 16px;
+}
+.submit a{
+    font-size: 12px;
+    color: #666;
+    display: inline-block;
+}
+.submit a:nth-of-type(2){
+    float: right;
+}
+.submit a:hover{
+    color:#e31939;
+}
+.submit input{
+    width: 18px;
+    height: 18px;
+    vertical-align:top;
+    outline: none;
+}
+form .finish input{
+    background:#e31939;
+    border: 0;
+    color: white;
+    outline: none;
+    width: 285px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    outline: none;
+}
+/*动态验证码*/
+.login_yan input{
+    width: 85px;
+    outline: none;
+}
+.login_yan a{
+    display: inline-block;
+    width:120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    background: #f6f6f6;
+    color: #666;
+    font-size: 12px;
+}
+.login_form .login_yan input{
+    background:url(../img/xx.png) no-repeat 12px center;
+}
+.active{
+    display: none;
+}
+form p{
+    color: #e31939;
+    font-size: 14px;
+    margin-top: 8px;
+}
+/*footer_center部分*/
+.footer_center{
+    width: 990px;
+    margin:0 auto;
+    margin-top: 20px;
+}
+.footer_center p{
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+}
+.footer_center p:hover span{
+    color: red;
+}
+.footer_center a{
+    display:block;
+    color: #999999;
+    text-align: center;
+    font-size: 12px;
+    margin-top: 13px;
+}
+

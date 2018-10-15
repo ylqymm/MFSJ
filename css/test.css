@@ -1,0 +1,54 @@
+/*
+Error: Invalid CSS after "    height: ": expected expression (e.g. 1px, bold), was ";"
+        on line 13 of sass/test.scss
+
+8: h1{
+9:     font-weight: 100;
+10:     color: red;
+11: }
+12: h2{
+13:     height: ;
+14: }
+
+Backtrace:
+sass/test.scss:13
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1207:in `expected'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/script/lexer.rb:229:in `expected!'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/script/parser.rb:710:in `assert_expr'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/script/parser.rb:75:in `parse'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1063:in `sass_script'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:909:in `value!'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:778:in `block in try_declaration'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1183:in `call'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:1183:in `rethrow'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:791:in `try_declaration'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:720:in `declaration_or_ruleset'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:685:in `block_child'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:674:in `block_contents'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:666:in `block'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:658:in `ruleset'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:684:in `block_child'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:677:in `block_contents'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:125:in `stylesheet'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/scss/parser.rb:41:in `parse'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/engine.rb:406:in `_to_tree'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/engine.rb:298:in `render_with_sourcemap'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `each'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/plugin/compiler.rb:294:in `watch'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/plugin.rb:109:in `method_missing'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/exec/sass_scss.rb:51:in `process_result'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/exec/base.rb:52:in `parse'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/lib/sass/exec/base.rb:19:in `parse!'
+F:/Program Files (x86)/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.24/bin/sass:13:in `<top (required)>'
+F:/Program Files (x86)/Ruby21-x64/bin/sass:23:in `load'
+F:/Program Files (x86)/Ruby21-x64/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    height: \": expected expression (e.g. 1px, bold), was \";\"\A         on line 13 of sass/test.scss\A \A 8: h1{\A 9:     font-weight: 100;\A 10:     color: red;\A 11: }\A 12: h2{\A 13:     height: ;\A 14: }"; }

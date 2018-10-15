@@ -2,8 +2,142 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>登录</title>
 	</head>
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
 	<body>
+		<div class="register">
+			<div class="logo">
+				<img src="img/headerCenter.png"/>
+				<h3>欢迎登录</h3>
+			</div>
+		</div>
+		<div class="content">
+			<div class="w990">
+				<div class="login">
+					<div class="login_con">
+						<div class="login_erweima"></div>
+						<div class="login_wrap">
+							<div class="login_top">
+								<span>还没有账号？</span>
+								<a href="register.html">立即注册 ></a>
+							</div>
+							<div class="login_down">
+								<ul>
+									<li><a href="#">普通登录</a></li>
+									<li><a href="#">动态密码登录</a></li>
+								</ul>
+								<form action="">
+									<!--普通登录-->
+									<div class="login_form phone">
+										<div class="all">
+											<input type="text" placeholder="已验证手机/邮箱/用户名" name="userName"  id="usernameId"/>
+											<p id="usernameP"></p>
+										</div>
+										<div class="all">
+											<input type="password" placeholder="密码" name="passwordName" id="passwordId" />
+											<p id="passwordP"></p>
+										</div>
+										
+										<div class="submit">
+											<input type="checkbox"  />
+											<a href="javascrpit:;">自动登录</a>
+											<a href="javascrpit:;">忘记密码？</a>
+										</div>
+										<div class="finish">
+											<input type="submit" value="立即登录" />
+										</div>
+									</div>
+									<!--动态登录-->
+									<div class="login_form active">
+										<input type="text" placeholder="已注册的手机号码"/>
+										<div class="login_yan">
+											<input type="text" placeholder="验证码" />
+										</div>
+										<div class="login_yan">
+											<input type="text" placeholder="动态密码" />
+											<a href="#">获取手机验证码</a>
+										</div>
+										<div class="submit">
+											<input type="checkbox" name="" id="" value="" />
+											<a href="#">自动登录</a>
+											<a href="#">忘记密码？</a>
+										</div>
+										<div class="finish">
+											<input type="submit" value="立即登录" />
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer部分-->
+		<div class="footer">
+			<div class="footer_center">
+				<p>上海悦目化妆品有限公司©2005-2015版权所有<span>沪ICP备16019821号</span> </p>
+				<a href="#">提供技术支持</a>
+			</div>
+		</div>
 	</body>
 </html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script>
+	$(function(){
+		$(".login_down ul li:nth-of-type(1)").click(function(){
+			$(".phone").css({display:"block"});
+			$(".active").css({display:"none"});
+			$(this).css({
+				border:"1px solid #e31939",
+				borderBottom:"none"
+			});
+			$(".login_down ul li:nth-of-type(2)").css({
+				border:"none",
+				borderBottom:"1px solid #e31939"
+			});
+		});
+		$(".login_down ul li:nth-of-type(2)").click(function(){
+			$(".phone").css({display:"none"});
+			$(".active").css({display:"block"});
+			$(this).css({
+				border:"1px solid #e31939",
+				borderBottom:"none"
+		});
+			
+			$(".login_down ul li:nth-of-type(1)").css({
+				border:"none",
+				borderBottom:"1px solid #e31939"
+			});
+	});
+
+		//正则验证
+		$('#usernameId').keyup(function(){
+		if(check($(this).val(),"userName")){
+			$('#usernameP').html('');
+			return;
+		}else{
+			$('#usernameP').html('！电话号码格式有误');
+		}
+	});
+	$('#passwordId').keyup(function(){
+		if(check($(this).val(),"passwordName")){
+			$('#passwordP').html('');
+			return;
+		}else{
+			$('#passwordP').html('！密码长度是6-20位字符');
+		}
+	});
+	function check(str,type){
+		switch(type){
+			case 'userName':
+			var pattern=/^[1]\d{10}/g;
+			break;
+			case 'passwordName':
+			var pattern=/^[0-9][\w]+[\w-]{6,20}/g;
+		}
+		return pattern.test(str);
+	}
+});
+</script>
