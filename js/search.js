@@ -19,7 +19,7 @@ let singlton=(function(){
 				top:0,
 				backgroundColor:"pink",
 				opacity:0.5,
-				multiple:2
+				multiple:4
 			}
 			for(let key in defaultObj){
 				obj[key]&&(defaultObj[key]=obj[key]);

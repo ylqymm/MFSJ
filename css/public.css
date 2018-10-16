@@ -279,16 +279,6 @@ ul{
 	z-index: 2;
 	margin-top: -190px;
 }
-.slider_down{
-	cursor: pointer;
-	width: 36px;
-	height: 36px;
-	position: absolute;
-	left: 0;
-	bottom:0;
-	background: url(../img/jlt.png) left center no-repeat;
-	background-position: -318px -174px;
-}
 .slider li{
 	cursor: pointer;
 	display: inline-block;
@@ -368,12 +358,26 @@ ul{
 	display: inline-block;
 	color: #e31939;
 }
+.slider_down{
+	cursor: pointer;
+	width: 36px;
+	height: 80px;
+	position: absolute;
+	left: 0;
+	bottom:0;
+}
+.slider_down ul li:nth-of-type(1){
+	height: 33px;
+	background:url(../img/jlt.png) left center no-repeat;
+	background-position: -318px -174px;
+	z-index: 8;
+}
 .slider_li:hover .slider_one{
 	display: block;
 }
-.slider_down:hover{
+/*.slider_down:hover{
 	background-color:#e31939; 
-}
+}*/
 .slider .looked{
 	position: relative;
 }
@@ -393,4 +397,30 @@ ul{
 }
 .slider .looked:hover span{
 	display: block;
+}
+/*返回顶部*/
+.slider_down .back{
+	width: 36px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	border-radius: 50%;
+	color: white;
+	font-size: 12px;
+	background: red;
+	bottom:0;
+	display: none;
+}
+/*购物车*/
+.shopping{
+	position: relative;
+}
+.cart{
+	width: 270px;
+	height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #666;
+    display: none;
 }

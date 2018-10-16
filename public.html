@@ -11,7 +11,7 @@
 			<div class="headerTopCenter">
 				<div class="headerTopCenter-left">
 					<a href="login.html">请登录</a>
-					<a href="rester.html" class="rester">免费注册</a>
+					<a href="register.html" class="rester">免费注册</a>
 				</div>
 				<div class="headerTopCenter-right">
 					<ul>
@@ -224,15 +224,17 @@
 							<span class="slider_one">
 								<img src="img/slider.jpg" alt="">
 								<span class="hi">你好！请 
-									<a href="#">登录</a> |
-									<a href="#">注册</a>
+									<a href="login.html">登录</a> |
+									<a href="register.html">注册</a>
 								</span>
 							</span>
 					</li>
-					<li>
+					<li class="shopping">
 						<a href="#">
 							<p>购物车<span>0</span></p>
 						</a>
+				<!-- 购物车 -->
+						<div class="cart"></div>
 					</li>
 					<li class="looked"><span>我看过的</span></li>
 					<li class="looked"><span>对比商品</span></li>
@@ -245,16 +247,21 @@
 					<li>
 						<a href="#"></a>
 					</li>
+					<li class="back">返顶</li>
 				</ul>
 			</div>
-		</div> 
+		</div>
 </body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
 	$(".nav_box_left").hover(
 		function(){
-			$(this).find(".shop").css({display:"block"});
+			$(this).find(".shop").css({
+				"display":"block",
+				"position":"absolute",
+				"z-index":999
+			});
 			$(".headerTopCenter .acticle_top ul").css({
 				"position":"absolute",
 				"z-index":-1
@@ -282,4 +289,25 @@
 		}
 	)
 	})
+
+	// $(".shopping").click(function(){
+	// 	$(".cart").css({
+	// 		"display":"block"
+	// 	})
+	// });
+
+	$(window).scroll(function() {
+			if ($(this).scrollTop() > $(window).height()) {
+				$('.back').show();
+			} else {
+				$('.back').hide();
+			}
+		});
+
+		$(".back").click(function() {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 800);
+			return false;
+		});
 </script>

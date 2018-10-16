@@ -26,7 +26,7 @@
 					<div class="reg_wrap phone">
 						<div class="reg_wrap_con">
 							<div class="reg_right"></div>
-							<form action="">
+							<form action="regSave.php" method="post">
 								<div class="reg_form">
 									<label for="" class="info" name="userName">
 										<span>*</span>
@@ -43,7 +43,7 @@
 										<span>密码：</span>
 									</label>
 									<div class="reg_input">
-										<input type="text" class="psId">
+										<input type="password" class="psId">
 										<p class="passP"></p>
 									</div>
 								</div>
@@ -94,7 +94,7 @@
 										<span></span>
 									</label>
 									<div class="reg_input sub">
-										<input type="button" value="同意协议并注册"/>
+										<input type="submit" value="同意协议并注册"/>
 									</div>
 								</div>
 							</form>
@@ -104,7 +104,7 @@
 					<div class="reg_wrap email">
 						<div class="reg_wrap_con">
 							<div class="reg_right"></div>
-							<form action="">
+							<form action="regSave.php" method="post">
 								<div class="reg_form">
 									<label for="" class="info" name="youxiang">
 										<span>*</span>
@@ -121,7 +121,7 @@
 										<span>密码：</span>
 									</label>
 									<div class="reg_input">
-										<input type="text" class="psId">
+										<input type="password" class="psId">
 										<p class="passP"></p>
 									</div>
 								</div>
@@ -173,7 +173,7 @@
 										<span></span>
 									</label>
 									<div class="reg_input sub">
-										<input type="button" value="同意协议并注册"/>
+										<input type="submit" value="同意协议并注册"/>
 									</div>
 								</div>
 							</form>
@@ -295,19 +295,19 @@
 			var pattern=/^[1][\d]{10}$/g;
 			break;
 			case 'pass':
-			var pattern=/^[0-9][\w]+[\w-]{6,20}/g;
+			var pattern=/^[0-9][\w]+[\w-]{6,20}$/g;
 			break;
 			case 'youxiang':
-			var pattern=/^[\w][\w\-]{4,}[\@]([\w]+)[\.][a-z0-9]{2,4}/ig;
+			var pattern=/^[\w][\w\-]{4,}[\@]([\w]+)[\.][a-z0-9]{2,4}$/ig;
 			break;
 			case 'reg':
-			var pattern=/[1-9][0-9]{5}/;
+			var pattern=/^[1-9][0-9]{5}$/;
 			break;
 			case 'message':
-			var pattern=/\d{4,5}/;
+			var pattern=/^\d{4,5}$/;
 			break;
 			case 'registerName':
-			var pattern=/[1-9][0-9]{5}/;
+			var pattern=/^[1-9][0-9]{5}$/;
 		}
 		return pattern.test(str);
 	}

@@ -27,7 +27,7 @@
 									<li><a href="#">普通登录</a></li>
 									<li><a href="#">动态密码登录</a></li>
 								</ul>
-								<form action="">
+								<form action="loginCheck.php" method="post">
 									<!--普通登录-->
 									<div class="login_form phone">
 										<div class="all">
@@ -48,23 +48,25 @@
 											<input type="submit" value="立即登录" />
 										</div>
 									</div>
+								</form>
+									<form action="loginCheck.php" method="post">
 									<!--动态登录-->
 									<div class="login_form active">
-										<input type="text" placeholder="已注册的手机号码"/>
+										<input type="text" placeholder="已注册的手机号码"/><br><br>
 										<div class="login_yan">
 											<input type="text" placeholder="验证码" />
-										</div>
+										</div><br>
 										<div class="login_yan">
 											<input type="text" placeholder="动态密码" />
 											<a href="#">获取手机验证码</a>
-										</div>
+										</div><br>
 										<div class="submit">
 											<input type="checkbox" name="" id="" value="" />
 											<a href="#">自动登录</a>
 											<a href="#">忘记密码？</a>
 										</div>
 										<div class="finish">
-											<input type="submit" value="立即登录" />
+											<input type="submit" value="立即登录" id="btn" />
 										</div>
 									</div>
 								</form>
@@ -84,6 +86,7 @@
 	</body>
 </html>
 <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/Cookie.js"></script>
 <script>
 	$(function(){
 		$(".login_down ul li:nth-of-type(1)").click(function(){
@@ -132,12 +135,20 @@
 	function check(str,type){
 		switch(type){
 			case 'userName':
-			var pattern=/^[1]\d{10}/g;
+			var pattern=/^[1]\d{10}$/g;
 			break;
 			case 'passwordName':
-			var pattern=/^[0-9][\w]+[\w-]{6,20}/g;
+			var pattern=/^[0-9][\w]+[\w-]{6,20}$/g;
 		}
 		return pattern.test(str);
 	}
+
+	//cookie免登录
+	$("#btn").click(function(){
+		//保存Cookie
+		setCookie("username",$("username").value,100);
+		location.href="login-cookie.html";
+	});
+
 });
 </script>

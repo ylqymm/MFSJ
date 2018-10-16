@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<style type="text/css">
+		#welcome{
+			display: none;
+		}
+		#login{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="welcome">
+		欢迎您来到膜法世家官网：<span id="usernameSpan"></span>
+	</div>
+	<div id="login">
+		<a href="login-cookie.html">请登录</a>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/Cookie.js"></script>
+<script type="text/javascript">
+	function $(id){
+		return document.getElementById(id);
+	}
+	window.onload = function(){
+		var username = getCookie("username");
+		if(username!=null){
+			$("welcome").style.display = "block";
+			$("usernameSpan").innerHTML = username;
+		}else{
+			$("login").style.display = "block";
+
+		}
+	}
+</script>
