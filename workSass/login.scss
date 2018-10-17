@@ -162,8 +162,11 @@ form .finish input{
     color: #666;
     font-size: 12px;
 }
-.login_form .login_yan input{
+.login_form .login_yan input:nth-of-type(1){
     background:url(../img/xx.png) no-repeat 12px center;
+}
+.login_form .login_yan input:nth-of-type(2){
+    background: none;
 }
 .active{
     display: none;
@@ -172,6 +175,18 @@ form p{
     color: #e31939;
     font-size: 14px;
     margin-top: 8px;
+}
+.login_form .login_yan #code{
+    font-family:Arial;
+    font-style:italic;
+    font-weight:bold;
+    border:0;
+    letter-spacing:2px;
+    color:blue;
+    font-size: 25px;
+    width: 120px;
+    margin-left: -25px;
+    cursor: move;
 }
 /*footer_center部分*/
 .footer_center{

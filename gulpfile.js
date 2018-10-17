@@ -26,10 +26,12 @@ gulp.task("sass",function(){
 	.pipe(sass())
 	.pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam\\css"));
 });
+gulp.task("php",function(){
+	gulp.src("*.php").pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam"));
+});
 
-
-gulp.task("build",["copy-html","copy-css","copy-img","copy-js","sass"],function(){
-	gulp.src("js/**/*").pipe(gulp.dest("D:\\phpStudy\\WWW\\iteam/js"));
+gulp.task("build",["copy-html","copy-css","copy-img","copy-js","sass","php"],function(){
+	console.log(ok);
 });
 //监听
 gulp.task("watchall",function(){
@@ -39,5 +41,6 @@ gulp.task("watchall",function(){
 	gulp.watch("css/**/*.css",["copy-css"]);
 	gulp.watch("js/**/*.js",["copy-js"]);
 	gulp.watch("workSass/**/*.scss",["sass"]);
+	gulp.watch("**/*.php",["php"]);
 });
 

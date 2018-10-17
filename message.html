@@ -34,14 +34,14 @@
 					<li><a href="#">膜法世家吴磊定制版鸡蛋面膜20片</a></li>
 				</ul>
 			</div>
-			<!--放大镜-->
+			<!--放大镜开始-->
 			<div class="acticleAll">
 				<div class="acticleAll_left">
 					<div class="bigBox">
 						<!--<div class="mirrorBox"></div>
 						<div class="showBox"></div>-->
 					</div>
-					<ul>
+					<ul class="uls">
 						<span></span>
 						<span></span>
 						<li><a href="#"></a></li>
@@ -51,9 +51,138 @@
 						<li><a href="#"></a></li>
 					</ul>
 				</div>
+				<!--放大镜结束-->
+				<div class="acticleAll_cen">
+					<h3>膜法世家吸黑焕采面膜贴21片</h3>
+					<p class="p">三效合一黑吸黑爆款黑面膜</p>
+					<div class="market">
+						<div class="market_left">
+							<p>
+								<span>市场价</span>
+								<span>￥279.90</span>
+							</p>
+							<p>
+								<span>售价</span>
+								<span>￥119.90</span>
+							</p>
+						</div>
+						<div class="market_right">
+							<p>
+								<span>累计销量</span>
+								<span>70</span>
+							</p>
+							<p>
+								<span>用户评价</span>
+								<span>22人评价</span>
+							</p>
+						</div>
+					</div>
+					<div class="friend">
+						<div class="service">服务</div>
+						<div class="you">由 <a href="javascript:void(0)"> 膜法世家官网 </a>负责发货，并负责售后服务</div>
+					</div>
+					<div class="friend countAll">
+						<div class="count">数量</div>
+						<div class="num">
+							<input type="number" value="1" style="focus">
+							<span>件</span>
+							<span>库存942件</span>
+						</div>
+					</div>
+					<div class="buy">
+						<input type="submit" value="立即购买">
+						<p>
+							<input type="submit" value="加入购物车">
+							<span></span>
+						</p>
+						<a href="#">手机购买<img src="img/erweima.png" alt="" style="width: 22px;height: 22px;vertical-align: middle;display: inline-block;margin-left: 10px;"></a>
+					</div>
+				</div>
+				<div class="acticleAll_right">
+					<div class="acticleAll_right1">
+						<a href="#"><img src="img/mfsj.png" alt=""></a>
+						<p>
+							<span>膜法世家官网</span>
+							<span>自营</span>
+						</p>
+					</div>
+					<div class="acticleAll_right1">
+						<div class="right1_left">
+							<span>5.00</span>
+							<span>综合</span>
+						</div>
+						<div class="right1_right">
+							<p><span>5.00</span>描述相符</p>
+							<p><span>5.00</span>发货速度</p>
+							<p><span>5.00</span>服务态度</p>
+						</div>
+					</div>
+					<div class="acticleAll_right1 xinyu">
+						<p>信誉：<img src="img/xinyu.gif" alt=""></p>
+						<p>所在地：广东省 广州市 白云山</p>
+						<p>客服：<a href="javascript:void(0)"><img src="img/QQ.gif" alt="">QQ交谈</a></p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
+	<!-- service部分 -->
+		<div class="service">
+			<div class="headerTopCenter">
+				<img src="img/service.png" alt="">
+			</div>
+		</div>
+		<!-- contact部分 -->
+		<div class="contact">
+			<div class="headerTopCenter con">
+				<div class="contact_left">
+					<h3>020-28167641</h3>
+					<p>
+						<span>联系我们</span>
+						<a href="#">
+							<img src="img/qq.jpg" alt=""></a>
+					</p>
+				</div>
+				<div class="contact_right">
+					<ul>
+						<h4>新手向导</h4>
+						<li><a href="#">购物流程</a></li>
+						<li><a href="#">订单查询</a></li>
+						<li><a href="#">常见问题</a></li>
+					</ul>
+					<ul>
+						<h4>支付方式</h4>
+						<li><a href="#">网上支付</a></li>
+						<li><a href="#">公司转账</a></li>
+						<li><a href="#">货到付款</a></li>
+					</ul>
+					<ul>
+						<h4>配送服务</h4>
+						<li><a href="#">配送范围及收费标准</a></li>
+						<li><a href="#">订单进度查询</a></li>
+						<li><a href="#">验货与签收</a></li>
+					</ul>
+					<ul>
+						<h4>售后服务</h4>
+						<li><a href="#">退换货政策</a></li>
+						<li><a href="#">退换货流程</a></li>
+						<li><a href="#">退款说明</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- footer部分 -->
+		<div class="footer">
+			<p>上海悦目化妆品有限公司©2005-2015版权所有
+				<a href="#" class="hao">沪ICP备16019821号</a>
+			</p>
+			<p>
+				<a href="#">
+					<img src="img/footer.png" alt="">
+				</a>
+				<a href="#" class="telc">提供技术支持</a>
+			</p>
+		</div>
 </body>
 </html>
 <script src="js/function.js" type="text/javascript" charset="utf-8"></script>
@@ -63,12 +192,22 @@
 	$(function(){
 		$("#box").load("public.html");
 
+	$.each(
+		$(".uls li"),function(){
+			$(this).click(function(){
+				$(this).css({border:'1px solid #666'}).siblings().css({border:'0'});
+				var url = $(this).css("backgroundImage").replace('url(','').replace(')','');
+				$(".bigBox").css({"backgroundImage":"url("+url+")"});
+				});
+			}
+		);
+
 		$('.bigBox').mouseenter(function(){
 			singlton.getInstance({
 				bigBoxDom:this,
 				bigBoxWidth:420,
 				bigBoxHeight:420,
-				bigImg:"img/shopping3.jpg",
+				bigImg:"img/shopping4.jpg",
 				width:100,
 				height:100
 			});

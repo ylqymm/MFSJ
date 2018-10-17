@@ -98,6 +98,19 @@ ul{
         line-height: 38px;
     }
 }
+.reg_input #code{
+    font-family:Arial;
+    font-style:italic;
+    font-weight:bold;
+    letter-spacing:4px;
+    color:skyblue;
+    font-size: 25px;
+    width: 120px;
+    height: 40px;
+    cursor: move;
+    margin-left: 10px;
+    vertical-align: middle;
+}
 .reg_form label{
   width:100px;
   line-height:38px;

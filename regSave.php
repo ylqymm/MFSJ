@@ -1,11 +1,8 @@
 ﻿<?php
 	header("Content-type:text/html;charset=utf-8");
-	
 	//1、接收数据
 	$username = $_POST['username'];
 	$userpass = $_POST['userpass'];
-	
-	
 	//2、处理（连接数据库，保存数据）
 	//1)、建立连接（搭桥）
 	$con = mysql_connect("localhost","root","root");
@@ -14,7 +11,6 @@
 	}else{
 		//2）、选择数据库（目的地）
 		mysql_select_db("mydb0917",$con);
-		
 		//3）、执行SQL数据（运输数据）
 		$sqlstr="select * from vip where username='$username'";
 		$result = mysql_query($sqlstr,$con);
@@ -22,22 +18,23 @@
 		if($rows>0){				
 			//4）、关闭数据库（过河拆桥）
 			mysql_close($con);
-			echo "亲，注册失败，用户名已经存在";
+			echo "-1";//用户名已存在
 		}else{
-			$sqlstr="insert into vip(username,userpass) values('$username','$userpass')";
+			$sqlstr="insert into vip (username,userpass) values('$username','$userpass')";
 			$result = mysql_query($sqlstr,$con);	
 			//4）、关闭数据库（过河拆桥）
 			mysql_close($con);
-			
 			//3、响应
-			echo $result."<br/>";
-			if($result){
+			// echo $result."<br/>";
+			if($result>=1){
+				echo "1";
 				//echo "注册成功！";			
 				//header("location:demo02login.html");
 				//echo "<script>alert('亲，恭喜您，注册成功！');location.href='demo02login.html'</script>";
-				header("location:login.html");
-			}else{
-				echo "注册失败！";
+				// header("location:login.html");
+			}
+			else{
+				echo "0";
 			}			
 		}
 	}

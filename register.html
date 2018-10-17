@@ -26,7 +26,7 @@
 					<div class="reg_wrap phone">
 						<div class="reg_wrap_con">
 							<div class="reg_right"></div>
-							<form action="regSave.php" method="post">
+							<form>
 								<div class="reg_form">
 									<label for="" class="info" name="userName">
 										<span>*</span>
@@ -43,7 +43,7 @@
 										<span>密码：</span>
 									</label>
 									<div class="reg_input">
-										<input type="password" class="psId">
+										<input type="password" class="psId" id="passwordId">
 										<p class="passP"></p>
 									</div>
 								</div>
@@ -53,7 +53,9 @@
 										<span>验证码：</span>
 									</label>
 									<div class="reg_input differ">
-										<input type="text" class="regId">
+										<input type="text" class="regId" id = "input">
+										<input type = "button" id="code" onclick="createCode()"/>
+										</div>
 										<p class="yanP"></p>
 									</div>
 								</div>
@@ -85,7 +87,8 @@
 									</label>
 									<div class="reg_input agree">
 										<input type="checkbox" />
-										<span>我已阅读并同意<a href="#">《用户注册协议》</a></span>
+										<span>我已阅读并同意<a href="#">《用户注册协议》</a></span>	
+										<p id="tishi"></p>
 									</div>
 								</div>
 								<div class="reg_form ">
@@ -94,7 +97,7 @@
 										<span></span>
 									</label>
 									<div class="reg_input sub">
-										<input type="submit" value="同意协议并注册"/>
+										<input type="submit" value="同意协议并注册" id="btn"  />
 									</div>
 								</div>
 							</form>
@@ -121,7 +124,7 @@
 										<span>密码：</span>
 									</label>
 									<div class="reg_input">
-										<input type="password" class="psId">
+										<input type="password" class="psId" id="psaaId">
 										<p class="passP"></p>
 									</div>
 								</div>
@@ -164,7 +167,8 @@
 									</label>
 									<div class="reg_input agree">
 										<input type="checkbox" />
-										<span>我已阅读并同意<a href="#">《用户注册协议》</a></span>
+										<span>我已阅读并同意<a href="#">《用户注册协议》</a>
+										<p id="tip"></p></span>
 									</div>
 								</div>
 								<div class="reg_form ">
@@ -173,7 +177,7 @@
 										<span></span>
 									</label>
 									<div class="reg_input sub">
-										<input type="submit" value="同意协议并注册"/>
+										<input type="submit" value="同意协议并注册" id="subm"/>
 									</div>
 								</div>
 							</form>
@@ -258,21 +262,21 @@
 		}
 	});
 	$('#emailId').keyup(function(){
-		if(check(this.val(),"youxiang")){
+		if(check($(this).val(),"youxiang")){
 			$('#emailP').html('');
 			return;
 		}else{
 			$('#emailP').html('！邮箱输入有误');
 		}
 	});
-	$('.regId').keyup(function(){
-		if(check($(this).val(),"reg")){
-			$('.yanP').html('');
-			return;
-		}else{
-			$('.yanP').html('！验证码输入有误');
-		}
-	});
+	// $('.regId').keyup(function(){
+	// 	if(check($(this).val(),"reg")){
+	// 		$('.yanP').html('');
+	// 		return;
+	// 	}else{
+	// 		$('.yanP').html('！验证码输入有误');
+	// 	}
+	// });
 	$('.messageId').keyup(function(){
 		if(check($(this).val(),"message")){
 			$('.messageP').html('');
@@ -311,5 +315,80 @@
 		}
 		return pattern.test(str);
 	}
+	//手机号验证
+	$("#btn").click(function(){
+		//console.log(123);
+		let xhr = new XMLHttpRequest();
+		xhr.open("post","regSave.php",true);
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				let str= xhr.responseText;
+				if(str=="1"){
+					$("#tishi").css({"display":"block"});
+					$("#tishi").html("注册失败，用户名已存在!");
+				}
+				if(str=="-1"){
+					$("#tishi").css({"display":"block"});
+					$("#tishi").html("注册成功!");
+				}		
+			}
+		}
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		let str="username="+$("#userNameId").val()+"&userpass="+$("#passwordId").val();
+		xhr.send(str);
 	});
+	//邮箱验证
+	$("#subm").click(function(){
+		//console.log(123);
+		let xhr = new XMLHttpRequest();
+		xhr.open("post","regSave.php",true);
+		xhr.onreadystatechange=function(){
+			if(xhr.readyState==4 && xhr.status==200){
+				let str= xhr.responseText;
+				if(str=="1"){
+					$("#tip").css({"display":"block"});
+					$("#tip").html("注册失败，用户名已存在!");
+				}
+				if(str=="-1"){
+					$("#tip").css({"display":"block"});
+					$("#tip").html("注册成功!");
+				}		
+			}
+		}
+		xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		let str="username="+$("#userNameId").val()+"&userpass="+$("#passwordId").val();
+		xhr.send(str);
+	});
+	})
+createCode();
+//验证码
+	var code ; //在全局定义验证码 
+			//产生验证码
+	function createCode(){
+		 code = ""; 
+		 var codeLength = 4;//验证码的长度
+		 var checkCode = document.getElementById("code"); 
+		 var random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R',
+		 'S','T','U','V','W','X','Y','Z');//随机数
+		 for(var i = 0; i < codeLength; i++) {//循环操作
+			var index = Math.floor(Math.random()*36);//取得随机数的索引（0~35）
+			code += random[index];//根据索引取得随机数加到code上
+		}
+			checkCode.value = code;//把code值赋给验证码
+	}
+			//校验验证码
+	function validate(){
+		var inputCode = document.getElementById("input").value.toUpperCase(); //取得输入的验证码并转化为大写      
+		if(inputCode.length <= 0) { //若输入的验证码长度为0
+			alert("请输入验证码！"); //则弹出请输入验证码
+		}       
+		else if(inputCode != code ) { //若输入的验证码与产生的验证码不一致时
+			alert("验证码输入错误"); //则弹出验证码输入错误
+			createCode();//刷新验证码
+			document.getElementById("input").value = "";//清空文本框
+		}       
+		else { //输入正确时
+			alert("^-^"); //弹出^-^
+		} 
+	}
 </script>
