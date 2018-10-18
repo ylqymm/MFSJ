@@ -192,16 +192,26 @@
 	$(function(){
 		$("#box").load("public.html");
 
-	$.each(
-		$(".uls li"),function(){
+	
+		$(".uls li").each(function(){
 			$(this).click(function(){
 				$(this).css({border:'1px solid #666'}).siblings().css({border:'0'});
 				var url = $(this).css("backgroundImage").replace('url(','').replace(')','');
 				$(".bigBox").css({"backgroundImage":"url("+url+")"});
-				});
-			}
-		);
 
+				$('.bigBox').mouseenter(function(){
+					singlton.getInstance({
+						bigBoxDom:this,
+						bigImg:url,
+						bigBoxWidth:420,
+						bigBoxHeight:420,
+						width:100,
+						height:100
+					});
+				});
+			});
+
+		});
 		$('.bigBox').mouseenter(function(){
 			singlton.getInstance({
 				bigBoxDom:this,
@@ -212,7 +222,5 @@
 				height:100
 			});
 		});
-
-
 	});
 </script>

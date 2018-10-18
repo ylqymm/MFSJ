@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/shoppingCart.css"/>
+</head>
+<body>
+		<!--header部分-->
+		<div id="header-top">
+			<div class="headerTopCenter">
+				<div class="headerTopCenter-left">
+					<a href="login.html">请登录</a>
+					<a href="rester.html" class="rester">免费注册</a>
+				</div>
+				<div class="headerTopCenter-right">
+					<ul>
+						<li>
+							<a href="#"><img src="img/sc.jpg" alt="">商城首页</a>
+						</li>
+						<li class="class_li">
+							<a href="#" class="my">
+								<img src="img/me.jpg" alt="">我的商城
+								<!-- <img src="img/jt.jpg" alt=""> -->
+								<span class="tras"></span>
+								<div class="gate">
+									<a href="#">已买到的宝贝</a>
+									<a href="#">我的地址管理</a>
+									<a href="#">我收藏的宝贝</a>
+									<a href="#">我收藏的店铺</a>
+								</div>	
+							</a>
+						</li>
+						<li class="class_li">
+							<a href="#"><img src="img/gwc.jpg" alt="">购物车<span> 0</span>
+								<!-- <img src="img/jt.jpg" alt=""> -->
+								<span class="tras"></span></a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="img/sc.jpg" alt="">卖家中心
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="header-center">
+			<div class="headerTopCenter">
+				<div class="headerCenterLeft">
+					<a href="#">
+						<img src="img/headerCenter.png" alt="">
+					</a>
+				</div>
+				<div class="search">
+					<form action="search.html" method="get" class="search-form">
+						<div class="search-info">
+							<div class="search-type-box">
+								<ul class="search-type" id="searchId">
+									<li class="search-li curr" num="0">宝贝
+									<!-- <img src="img/jt1.png" alt=""> -->
+									<span class="tras"></span>
+									</li>
+									<li class="search-li next" num="1">店铺</li>
+								</ul>
+							</div>
+						</div>
+						<div class="search-box">
+							<div class="search-box-con">
+								<input type="text" class="search-box-input" placeholder="黑面膜">
+							</div>
+						</div>
+						<input type="button" value="搜索" class="search-box-button">
+					</form>
+					<div class="hot">
+						<ul>
+							<li>
+								<a href="#" title="面膜">面膜</a> |
+							</li>
+							<li>
+								<a href="#" title="绿豆">绿豆</a> |
+							</li>
+							<li>
+								<a href="#" title="面膜贴">面膜贴</a> |
+							</li>
+							<li>
+								<a href="#" title="睡眠面膜">睡眠面膜</a> |
+							</li>
+							<li>
+								<a href="#" title="洁面乳">洁面乳</a> |
+							</li>
+							<li>
+								<a href="#" title="精华">精华</a> |
+							</li>
+							<li>
+								<a href="#" title="套装">套装</a> |
+							</li>
+							<li>
+								<a href="#" title="补水">补水</a> |
+							</li>
+							<li>
+								<a href="#" title="男士">男士</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="headerCenterRight">
+					<a href="#">
+						<img src="img/header1.jpg" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- shopping -->
+		<div class="shopping">
+			<div class="shopping_cen">
+				<div class="shopping_cen_top">
+					<h3>我的购物车<span>1</span></h3>
+				</div>
+				<div class="shopping_cen_cen">
+					<div class="sleft">
+						<input type="checkbox" class="only">
+						<div class="check1 checkall">全选</div>
+						<div class="check1">商品信息</div>
+					</div>
+					<div class="sright">
+						<div class="check1">单价(元)</div>
+						<div class="check1">数量</div>
+						<div class="check1">金额(元)</div>
+						<div class="check1 last">操作</div>
+					</div>
+				</div>
+				<div class="shopping_cen_cen1">
+						<input type="checkbox" class="chekedbox">
+						<img src="img/s1.png" alt="">
+						<span>店铺：</span>
+						<a href="javascript:void(0)">膜法世家官网<img src="img/qq.gif" alt=""></a>
+				</div>
+				<div class="shopping_cen_cen2">
+					<div class="shopLeft">
+						<input type="checkbox" class="chekedbox">
+						<img src="img/s2.jpg" alt="">
+						<span>膜法世家水光面膜贴20片</span>
+					</div>	
+					<div class="shopRight">
+						<div class="price1">
+							<!-- <p>￥269.90</p> -->
+							￥<p>129.90</p>
+						</div>
+						<div class="price2">
+							<span class="reduceCls">-</span>
+							<input type="text" value="1" class="money">
+							<span class="addCls">+</span>
+						</div>
+						<div class="price3">￥<span class="prices">129.90</span></div>
+						<div class="price4">
+							<a href="javascript:void(0)" class="removeId">删除</a>
+						</div>
+					</div>
+				</div>
+				<div class="shopping_cen_cen2">
+					<div class="shopLeft">
+						<input type="checkbox" class="chekedbox">
+						<img src="img/s3.jpg" alt="">
+						<span>膜法世家水光面膜贴20片</span>
+					</div>	
+					<div class="shopRight">
+						<div class="price1">
+							<!-- <p>￥269.90</p> -->
+							￥<p>129.90</p>
+						</div>
+						<div class="price2">
+							<span class="reduceCls">-</span>
+							<input type="text" value="1" class="money">
+							<span class="addCls">+</span>
+						</div>
+						<div class="price3">￥<span class="prices">129.90</span></div>
+						<div class="price4">
+							<a href="javascript:void(0)" class="removeId">删除</a>
+						</div>
+					</div>
+				</div>
+				<div class="shopping_cen_cen3">
+					<div class="totalLeft">
+						<div class="chekedbox"></div>
+						<a href="javascript:void(0)">全选</a>
+						<a href="javascript:void(0)">删除</a>
+					</div>	
+					<div class="totalRight">
+						<!-- <div class="select1">已选择商品<span>1</span>件</div> -->
+						<div class="select2">合计：(不含运费): <i>￥</i><span id="total">0.00</span></div>
+						<div class="select3">结算</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- footer部分 -->
+		<div class="footer">
+			<p>上海悦目化妆品有限公司©2005-2015版权所有
+				<a href="#" class="hao">沪ICP备16019821号</a>
+			</p>
+			<p>
+				<a href="#">
+					<img src="img/footer.png" alt="">
+				</a>
+				<a href="#" class="telc">提供技术支持</a>
+			</p>
+		</div>
+</body>
+</html>
+<script type="text/javascript">
+	function $(str){
+	if(str.charAt(0)=="#"){
+		return document.getElementById(str.substring(1));
+	}else if(str.charAt(0)=="."){
+		return document.getElementsByClassName(str.substring(1));
+	}else{
+		return document.getElementsByTagName(str);
+	}
+}	
+	window.onload=function(){
+		var addBtns=$(".addCls");
+		for(var i in addBtns){
+			//console.log(addBtns)
+			addBtns[i].onclick=function(){
+				//1.改数量
+				var count=parseFloat(this.previousElementSibling.value);
+				//console.log(count)
+				count++;
+				this.previousElementSibling.value=count;
+				//2.改单价
+				var price=parseFloat(this.parentNode.previousElementSibling.firstElementChild.innerHTML);
+				//console.log(price);
+				var money=(price*count).toFixed(2);
+				//console.log(money);
+				this.parentNode.nextElementSibling.firstElementChild.innerHTML=money;
+				//3.改总额
+				totalMoney();
+			}
+		}
+		
+		var reduceCls=$(".reduceCls");
+		for(var i in reduceCls){
+			reduceCls[i].onclick=function(){
+				//1.改数量
+				var count=parseFloat(this.nextElementSibling.value);
+				count--;
+				if(count<0){
+					return;
+				}
+				this.nextElementSibling.value=count;
+				//2.改单价
+				var price=parseFloat(this.parentNode.previousElementSibling.firstElementChild.innerHTML);
+				var money=(price*count).toFixed(2);
+				this.parentNode.nextElementSibling.firstElementChild.innerHTML=money;
+				//3.改总额
+				totalMoney();
+			}
+		}
+		//删除函数
+	var removeId =$(".removeId");//循环这些删除按钮
+	for(var i in removeId){
+		$(".removeId")[i].onclick = function(){
+			let bb=this.parentNode.parentNode.parentNode;
+			console.log(bb);
+			bb.remove();
+			//console.log(this.parentNode.parentNode.parentNode)
+			//当点击删除时，调用合计函数，重新判断当前合计的价格
+			totalMoney();
+		}
+	}
+	//总计
+	function totalMoney(){
+		var price3=$(".prices");
+		var sum=0;
+		for(i=0;i<price3.length;i++){
+			sum+=parseFloat(price3[i].innerHTML);
+		}
+		$("#total").innerHTML=sum.toFixed(2);
+	}
+}
+	
+	
+</script>
