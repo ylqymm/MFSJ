@@ -25,7 +25,7 @@
 					<!--手机注册部分-->
 					<div class="reg_wrap phone">
 						<div class="reg_wrap_con">
-							<div class="reg_right"></div>
+							<!-- <div class="reg_right"></div> -->
 							<form>
 								<div class="reg_form">
 									<label for="" class="info" name="userName">
@@ -55,7 +55,6 @@
 									<div class="reg_input differ">
 										<input type="text" class="regId" id = "input">
 										<input type = "button" id="code" onclick="createCode()"/>
-										</div>
 										<p class="yanP"></p>
 									</div>
 								</div>
@@ -315,6 +314,8 @@
 		}
 		return pattern.test(str);
 	}
+
+
 	//手机号验证
 	$("#btn").click(function(){
 		//console.log(123);
@@ -360,6 +361,7 @@
 		xhr.send(str);
 	});
 	})
+
 createCode();
 //验证码
 	var code ; //在全局定义验证码 
@@ -376,19 +378,22 @@ createCode();
 		}
 			checkCode.value = code;//把code值赋给验证码
 	}
+
+	
 			//校验验证码
 	function validate(){
-		var inputCode = document.getElementById("input").value.toUpperCase(); //取得输入的验证码并转化为大写      
+		var inputCode = document.getElementById("input").val().toUpperCase(); //取得输入的验证码并转化为大写      
 		if(inputCode.length <= 0) { //若输入的验证码长度为0
 			alert("请输入验证码！"); //则弹出请输入验证码
 		}       
 		else if(inputCode != code ) { //若输入的验证码与产生的验证码不一致时
 			alert("验证码输入错误"); //则弹出验证码输入错误
 			createCode();//刷新验证码
-			document.getElementById("input").value = "";//清空文本框
+			document.getElementById("input").val() = "";//清空文本框
 		}       
 		else { //输入正确时
 			alert("^-^"); //弹出^-^
 		} 
 	}
+	
 </script>

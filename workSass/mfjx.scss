@@ -1,0 +1,90 @@
+@charset "UTF-8";
+body,p,ul,ol,dl,dd,h1,h2,h3,h4,h5,h6,td,input,select,option,textarea{
+    margin:0;
+    padding:0;
+}
+i{
+  font-style:normal;
+}
+ul {
+  list-style: none; }
+.mfjx{
+  width: 1210px;
+  margin: 0 auto;
+}
+.mfjx img{
+  display: block;
+  border:0;
+}
+
+  /*service部分*/
+.service img{
+  padding-top: 25px;
+}
+/*contact部分*/
+.con{
+  border-top:1px solid #eee;
+}
+.contact_left{
+  float: left;
+}
+.contact_left h3{
+  color: #e21939;
+  font-size: 24px;
+  padding-top: 30px;
+}
+.contact_left p{
+  padding-top: 50px;
+}
+.contact_left p img{
+  vertical-align: middle;
+}
+.contact_right{
+  padding-top: 30px;
+  float: left;
+  margin-bottom: 55px;
+}
+.contact_right h4{
+  font-size: 16px;
+  color: #666762;
+  padding-bottom: 14px;
+}
+.contact_right ul{
+  float: left;
+  padding-left: 100px;
+}
+.contact_right ul li a{
+  display: inline-block;
+  padding-bottom: 8px;
+  color: #9a989d;
+  font-size: 12px;
+}
+.contact_right ul li a:hover{
+  color:#e21a37; 
+}
+/*footer部分*/
+.footer{
+  clear: both;
+  background: #34495e;
+  height: 78px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+.footer p:first-child{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+.footer a{
+  color: white;
+}
+.footer p a img{
+  vertical-align: middle;
+}
+.footer .telc{
+  color: #9a9997;
+}
+.hao:hover{
+color:#e21a37;
+}

@@ -254,6 +254,7 @@ ul {
   /*list部分*/
   .list_cen{
     position: relative;
+    text-align: center;
   }
   .list_left_cen{
     float: left;
@@ -316,13 +317,13 @@ ul {
   color: white;
   background:#ff4400; 
 }
-.cart{
+.cartGreen{
   float: right;
   img{
     width: 29px;
     height: 29px;
     display: inline-block;
-  margin: 25px 10px 10px 0px;
+    margin: 25px 10px 10px 0px;
   }
 }
 /*service部分*/

@@ -7,7 +7,7 @@
 	$conn = mysql_connect("localhost","root","qianfeng");
 	
 	//2）、选择数据库（找目的地）
-	if(!mysql_select_db("shoppingcenter",$conn)){
+	if(!mysql_select_db("iteam",$conn)){
 		die("数据库选择失败".mysql_error());
 	};
 	

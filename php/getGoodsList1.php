@@ -11,7 +11,7 @@
 	}
 	
 	//3）、传输数据（过桥）
-	$sqlstr = "select * from goodsInfo order by goodsId";
+	$sqlstr = "select * from goodsInfo1 order by goodsId";
 	$result = mysql_query($sqlstr,$conn);//执行查询的sql语句后，有返回值，返回的是查询结果
 	if(!$result){
 		die("获取数据失败".mysql_error());

@@ -126,6 +126,7 @@
 	height: 240px;
 	border-right:1px solid #f1f1f1;
 	border-bottom:1px solid #f1f1f1;
+	text-align: center;
 }
 .product1 img{
 	width: 160px;
@@ -133,22 +134,32 @@
 }
 .product1 a{
 	text-align: center;
-	display: block;
+	display: inline-block;
 	font-size: 12px;
+	width: 234px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.product1 .product1_shopping a{
+	display: inline;
 }
 .product1_shopping{
-	margin-top: 25px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	overflow: hidden;
 }
 .product1_shopping span{
 	color: #e21939;
 	font-size: 16px;
 	display: inline-block;
-	text-indent: 40px;
+	text-indent: 20px;
 	float: left;
 }
 .product1_shopping img{
 	float: right;
 	padding-right: 20px;
+	vertical-align: middle;
 }
 /*选项卡切换*/
 .one{

@@ -250,57 +250,35 @@ i{
     margin-left: 10px;
 }
 .buy{
-    margin: 10px 0px 0px 72px;
-}
-.buy input{
-    width: 160px;
-    height: 38px;
-    line-height: 38px;
-    text-align: center;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.buy input:nth-of-type(1){
-    color:#e31939 ;
-    font-size:14px;
-    background:#fdedef; 
-    border:1px solid #f8c3cb;
-    margin-right: 10px;
-}
-.buy p{
-    display: inline-block;
-    position: relative;
-    /*overflow: hidden;*/
-}
-.acticleAll_cen .buy p input{
-    color:white ;
-    font-size:14px;
-    border:1px solid #f8c3cb;
-    background-color: #e31939;
-    position: absolute;
-    top: -25px;
-    z-index: -4;
-}
- .acticleAll_cen .buy p span{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    left: 15px;
-    top: -12px;
-    background:url(../img/jlt.png) no-repeat left center;
-    background-position: -327px -34px;
-    z-index: -1;
+    margin: 20px 0px 0px 72px;
 }
 .buy a{
-    float: right;
-    font-size: 12px;
     display: inline-block;
-    margin-top: 10px;
 }
-.buy a:hover{
+.buy a:nth-of-type(1){
+    background: #fdedef;
+    border:1px solid #f8c3cb;
     color: #e31939;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 12px 45px;
+    text-align: center;
+}
+.buy a:nth-of-type(2){
+    background: #e31939;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    padding: 12px 35px;
+    text-align: center;
+    margin-right: 30px;
+    span{
+        display: inline-block;
+        width:20px ;
+        height: 20px;
+        background: url(../img/jlt.png) left center no-repeat;
+        background-position: -329px -31px;
+    }
 }
 .acticleAll_right{
     border:1px solid #eee;
