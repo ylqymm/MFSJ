@@ -15,11 +15,7 @@
 		$sqlstr="select * from vip where username='$username'";
 		$result = mysql_query($sqlstr,$con);
 		$rows = mysql_num_rows($result);
-		if($rows>0){				
-			//4）、关闭数据库（过河拆桥）
-			mysql_close($con);
-			echo "-1";//用户名已存在
-		}else{
+		if($rows<=0){				
 			$sqlstr="insert into vip (username,userpass) values('$username','$userpass')";
 			$result = mysql_query($sqlstr,$con);	
 			//4）、关闭数据库（过河拆桥）
@@ -28,14 +24,11 @@
 			// echo $result."<br/>";
 			if($result>=1){
 				echo "1";
-				//echo "注册成功！";			
-				//header("location:demo02login.html");
-				//echo "<script>alert('亲，恭喜您，注册成功！');location.href='demo02login.html'</script>";
-				// header("location:login.html");
-			}
-			else{
+			}else{
 				echo "0";
 			}			
+		}else{
+			echo "-1";
 		}
 	}
 ?>

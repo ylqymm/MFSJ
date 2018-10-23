@@ -221,7 +221,6 @@
 		});
 		*/
 
-
 		//ajax
 		$.ajax({
 			type:"get",
@@ -230,6 +229,7 @@
 			data:null,
 			success:function(data){
 				var listdata = '';
+				var ll="";
 				for(var i=0;i<data.length;i++){
 					listdata+="<div class='list_left_cen'>\
 									<a href='#'>\
@@ -268,10 +268,33 @@
 								</div>";
 								$(".list").html(listdata);
 				}
-			
-				
-			},
-			dataType:"json"
+		},
+		dataType:"json",
 		});	
+
+		// //ajax
+		// $.ajax({
+		// 	type:"get",
+		// 	url:"php/getGoodsList.php",
+		// 	async:true,
+		// 	data:null,
+		// 	success:function(data){
+		// 		var listdata = '';
+		// 		for(var i=0;i<4;i++){
+		// 		listdata+='<div class="list_left_cen con">\
+		// 					<a href="#"><img src='+data[i].goodsImg+' width="210px">\
+		// 					</a>\
+		// 					<p><a href="#">'+data[i].goodsName+'</a></p>\
+		// 					<div class="list_left_d">\
+		// 						<span>￥'+data[i].goodsPrice+'</span>\
+		// 						<span>销量 :'+data[i].goodsCount+'</span>\
+		// 					</div>\
+		// 				</div>'
+		// 		$(".list_cen_left").html(listdata);
+		// 	}
+		// },
+		// dataType:"json",
+		// });	
 	});
 </script>
+

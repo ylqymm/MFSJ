@@ -182,7 +182,7 @@
 				</div>
 				<div class="shopping_cen_cen3">
 					<div class="totalLeft">
-						<input type="text" class="chekedbox" >
+						<input type="checkbox" class="chekedbox" >
 						<a href="javascript:void(0)">全选</a>
 						<a href="javascript:void(0)">删除</a>
 					</div>	
@@ -210,10 +210,72 @@
 </html>
 <script src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/Allcheck.js"></script>
-<script type="text/javascript" src="js/shoppingCart(jquery).js"></script>
+<!-- <script type="text/javascript" src="js/shoppingCart(jquery).js"></script> -->
 <script type="text/javascript">
 $(function(){
-    $(".only").bindCheck($(".shopping :checkbox"),$(""));
+
+	$(".addCls").each(function(){
+			$(this).click(function(){
+				//1.改数量
+				var count=parseFloat($(this).parents(".price2").find(".money").val());
+				count++;
+				$(this).parents(".price2").find(".money").val(count);
+				//2.改单价
+				var price=parseFloat($(this).parents(".shopRight").find(".price1 p").html());
+				//console.log(price);
+				var money=(price*count).toFixed(2);
+				//console.log(money);
+				$(this).parents(".shopRight").find(".price3 .prices").html(money);
+				//console.log($(this).parents(".shopRight").find(".price3 .prices"))
+				//3.改总额
+				totalMoney();
+			});
+		});
+	
+		
+		$(".reduceCls").each(function(){
+			$(this).click(function(){
+				//1.改数量
+				var count=parseFloat($(this).parents(".price2").find(".money").val());
+				count--;
+				if(count<0){
+					return;
+				}
+				$(this).parents(".price2").find(".money").val(count);
+				//2.改单价
+				var price=parseFloat($(this).parents(".shopRight").find(".price1 p").html());
+				var money=(price*count).toFixed(2);
+				$(this).parents(".shopRight").find(".price3 .prices").html(money);
+				//3.改总额
+				totalMoney();
+			});
+		});
+		
+		//删除函数
+	$(".removeId").each(function(){
+		$(this).click(function(){
+			let bb=$(this).parents(".shopRight").parents(".shopping_cen_cen2");
+			let del=confirm("你确定删除吗?");
+			if(del){
+				bb.remove();
+			}
+			
+			//当点击删除时，调用合计函数，重新判断当前合计的价格
+			totalMoney();
+		});
+	});
+	
+	//总计
+	function totalMoney(){
+		var sum=0;
+		$(".prices").each(function(){
+			sum+=parseFloat($(this).html());
+		});
+		$("#total").html(sum.toFixed(2));
+	}
+
+
+    $(".only").bindCheck($(".shopping :checkbox"),$(""),totalMoney());
     $(".chekedbox").bindCheck($(".shopping :checkbox"),$(""));
 });
 </script>

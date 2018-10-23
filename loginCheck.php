@@ -23,7 +23,7 @@
 			echo "-1";
 		}else if($rows>=1){
 			echo "1";			
-			// header("location:index.html");
+			 header("location:index.html");
 		}
 	}
 ?>
